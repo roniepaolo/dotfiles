@@ -11,7 +11,7 @@
           "style": "diamond",
           "leading_diamond": "",
           "trailing_diamond": "",
-          "foreground": "#119adf",
+          "foreground": "#268bd2",
           "background": "#444444",
           "properties": {
           }
@@ -32,7 +32,7 @@
           "type": "path",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#119adf",
+          "foreground": "#268bd2",
           "background": "#444444",
           "properties": {
             "style": "folder",
