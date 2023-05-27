@@ -63,7 +63,11 @@ local plugins = {
   {
     'numToStr/Comment.nvim',
     dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring' }
-  }
+  },
+
+  -- Git
+  'lewis6991/gitsigns.nvim',
+  'dinhhuy258/git.nvim'
 }
 
 local opts = {
