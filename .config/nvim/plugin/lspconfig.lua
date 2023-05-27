@@ -88,11 +88,17 @@ nvim_lsp.bashls.setup {
 }
 
 nvim_lsp.pyright.setup({
-  on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
+  cmd = { "pyright-langserver", "--stdio" },
+  filetypes = { "python" },
   capabilities = capabilities,
   settings = {
     python = {
       analysis = {
+        disableOrganizeImports = false,
         typeCheckingMode = "basic",
         autoSearchPaths = true,
         useLibraryCodeForTypes = true,

@@ -28,7 +28,8 @@ ts.setup {
     "cpp",
     "dockerfile",
     "gitignore",
-    "kotlin"
+    "kotlin",
+    "sql"
   },
   autotag = {
     enable = true,
@@ -36,8 +37,6 @@ ts.setup {
   context_commentstring = {
     enable         = true,
     enable_autocmd = false,
-  }
+  },
 }
 
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
