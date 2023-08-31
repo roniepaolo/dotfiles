@@ -1,0 +1,176 @@
+{
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "One Dark italic",
+                "scope": [
+                    "comment",
+                    "entity.other.attribute-name",
+                    "keyword",
+                    "markup.underline.link",
+                    "storage.modifier",
+                    "storage.type",
+                    "string.url",
+                    "variable.language.super",
+                    "variable.language.this"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "One Dark italic reset",
+                "scope": [
+                    "keyword.operator",
+                    "keyword.other.type",
+                    "storage.modifier.import",
+                    "storage.modifier.package",
+                    "storage.type.built-in",
+                    "storage.type.function.arrow",
+                    "storage.type.generic",
+                    "storage.type.java",
+                    "storage.type.primitive"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "workbench.colorTheme": "One Dark",
+    "workbench.iconTheme": "a-file-icon-vscode",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+    },
+    "[scala]": {
+        "editor.defaultFormatter": "scalameta.metals",
+        "editor.formatOnSave": true
+    },
+    "black-formatter.args": [
+        "--line-length",
+        "79"
+    ],
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Switch b/w buffers
+        {
+            "before": [
+                "<Tab>"
+            ],
+            "commands": [
+                ":bnext"
+            ]
+        },
+        {
+            "before": [
+                "<S-Tab>"
+            ],
+            "commands": [
+                ":bprevious"
+            ]
+        },
+        // Splits
+        {
+            "before": [
+                "s",
+                "s"
+            ],
+            "commands": [
+                ":split<Return><C-w>w"
+            ]
+        },
+        {
+            "before": [
+                "s",
+                "v"
+            ],
+            "commands": [
+                ":vsplit<Return><C-w>w"
+            ]
+        },
+        // Panes
+        {
+            "before": [
+                "s",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.focusLeftGroup"
+            ]
+        },
+        {
+            "before": [
+                "s",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.focusBelowGroup"
+            ]
+        },
+        {
+            "before": [
+                "s",
+                "k"
+            ],
+            "commands": [
+                "workbench.action.focusAboveGroup"
+            ]
+        },
+        {
+            "before": [
+                "s",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.focusRightGroup"
+            ]
+        },
+        // Files managament
+        {
+            "before": [
+                "s",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                ";",
+                "r"
+            ],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindings": [
+        // Remappings
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+          "before": ["g", "c"],
+          "commands": ["editor.action.commentLine", "escape"],
+          "when": "editorTextFocus && !editorReadonly"
+        }
+      ],
+    "vim.handleKeys": {
+        "<C-t>": false,
+    },
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.guides.indentation": false,
+    "editor.fontSize": 14,
+    "workbench.activityBar.visible": false,
+    "editor.rulers": [80]
+}

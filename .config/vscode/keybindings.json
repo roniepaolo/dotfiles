@@ -1,0 +1,78 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+a",
+        "command": "vim.remap",
+        "when": "inputFocus && vim.mode == 'Normal'",
+        "args": {
+            "after": [
+                "g",
+                "g",
+                "<S-v>",
+                "G"
+            ]
+        }
+    },
+    {
+        "key": "x",
+        "command": "vim.remap",
+        "when": "inputFocus && vim.mode == 'Normal'",
+        "args": {
+            "after": [
+                "\"",
+                "_",
+                "x"
+            ]
+        }
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "sideBarVisible && !filesExplorerFocus && !suggestWidgetVisible && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.files.action.focusFilesExplorer",
+        "when": "sideBarVisible && !filesExplorerFocus && !suggestWidgetVisible && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "!sideBarVisible && !suggestWidgetVisible && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.files.action.focusFilesExplorer",
+        "when": "!sideBarVisible && !suggestWidgetVisible && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible && vim.mode == 'Insert'"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible && vim.mode == 'Insert'"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "nerdtree.unfocusSidebarOrClose",
+        "when": "filesExplorerFocus && sideBarVisible"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-nerdtree.unfocusSidebarOrClose",
+        "when": "filesExplorerFocus && sideBarVisible"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && vim.mode == 'Insert'"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && vim.mode == 'Insert'"
+    }
+]
