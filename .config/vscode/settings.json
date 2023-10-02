@@ -154,6 +154,11 @@
           "before": ["g", "c"],
           "commands": ["editor.action.commentLine", "escape"],
           "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+          "before": ["o", "i"],
+          "commands": ["editor.action.organizeImports", "escape"],
+          "when": "editorTextFocus && !editorReadonly"
         }
       ],
     "vim.handleKeys": {
