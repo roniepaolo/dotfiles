@@ -1,6 +1,7 @@
-if type -q exa
-  alias ll "exa -l -g --icons"
-  alias lla "ll -a"
+if type -q eza
+  alias ll "eza -l -g --icons --git"
+  alias lla "ll -a -h --git"
+  alias llt "eza -l -g --icons -T --git"
 end
 
 # Inkdrop
