@@ -20,6 +20,15 @@ return {
     end,
   },
 
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        python = { "isort", "black" },
+      },
+    },
+  },
+
   -- lsp servers
   {
     "neovim/nvim-lspconfig",
