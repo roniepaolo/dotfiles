@@ -37,8 +37,10 @@
       }
     ]
   },
-  "workbench.colorTheme": "One Dark",
-  "workbench.iconTheme": "a-file-icon-vscode",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+  "[avroavsc]": {
+    "editor.formatOnSave": true
+  },
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true
@@ -46,7 +48,8 @@
   "[cpp]": {
     "editor.formatOnSave": true
   },
-  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 5, ColumnLimit: 80}",
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 80}",
+  "C_Cpp.default.cppStandard": "c++17",
   "[scala]": {
     "editor.defaultFormatter": "scalameta.metals",
     "editor.formatOnSave": true
@@ -54,7 +57,7 @@
   "[javascript]": {
     "editor.formatOnSave": true
   },
-  "black-formatter.args": ["--line-length", "81"],
+  "black-formatter.args": ["--line-length", "80"],
   "vim.hlsearch": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     // Switch b/w buffers
@@ -69,11 +72,11 @@
     // Splits
     {
       "before": ["s", "s"],
-      "commands": [":split<Return><C-w>w"]
+      "commands": ["workbench.action.splitEditorOrthogonal"]
     },
     {
       "before": ["s", "v"],
-      "commands": [":vsplit<Return><C-w>w"]
+      "commands": ["workbench.action.splitEditor"]
     },
     // Panes
     {
@@ -141,9 +144,14 @@
   "editor.fontSize": 15,
   "editor.rulers": [80],
   "workbench.activityBar.location": "hidden",
+  "editor.lineNumbers": "relative",
+  "vim.useSystemClipboard": true,
+  // Terminal
   "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.fontSize": 14,
   "terminal.external.osxExec": "iTerm.app",
   "terminal.explorerKind": "external",
-  "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono"
+  "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono",
+  // NERDTree
+  "nerdtree.hideSidebarWhenOpenFile": false
 }
