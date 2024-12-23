@@ -1,0 +1,114 @@
+" --- @roniepaolo - My settings
+
+
+" --- General settings
+
+" What key is going to be used as the leader
+let mapleader = " "
+
+" Show the number for each line
+set linenumber
+
+" Number of lines before to leave the screen
+set scrolloff=5
+
+" Show the number of the line
+set relativenumber
+
+" IdeaVim and System clipboard is shared
+set clipboard+=unnamed
+
+" Case-insensitive search by default
+set ignorecase
+
+" If any character is uppercase, treat the search as case-sensitive
+set smartcase
+
+" Start searching as you type
+set incsearch
+
+" Results of the search are highlighted
+set hlsearch
+
+
+" --- Plugins
+
+" Surround plugin is bundled with native IdeaVim
+set surround
+
+" Highlight the line you yanked. It is natively bundled with IdeaVim
+set highlightedyank
+
+ " Set NerdTree. It is natively bundled with IdeaVim
+set nerdtree
+
+set commentary
+
+
+" --- Key mappings
+
+" Go to next tab with tab
+nnoremap <tab> :tabnext<Return>
+
+" Go to previous tab with shift + tab
+nnoremap <s-tab> :tabprev<Return>
+
+" Close tab
+map <leader>q <action>(CloseContent)
+
+" Split window horizontally
+nnoremap ss :split<Return>
+
+" Split window vertically
+nnoremap sv :vsplit<Return>
+
+" Go to left window
+nnoremap sh <C-w>h
+
+" Go to up window
+nnoremap sk <C-w>k
+
+" Go to down window
+nnoremap sj <C-w>j
+
+" Go to right window
+nnoremap sl <C-w>l
+
+" Indent to the left
+vnoremap < <gv
+
+" Indent to the right
+vnoremap > >gv
+
+" Comments
+" map gc <action>(CommentByLineComment)
+
+
+" --- NERDTree toggle (use q to exit)
+map <leader>t :NERDTreeToggle<CR>
+
+
+" File navigation
+map <leader>ff <action>(GotoFile)
+map <leader>fr <action>(RecentFiles)
+map <leader>fc <action>(FindInPath)
+map <leader><leader> <Action>(RecentFiles)
+map <leader>fl <action>(RecentLocations)
+map <leader>fs <action>(NewScratchFile)
+
+" Refactoring
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+" Go to code
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gu <Action>(ShowUsages)
+nmap <leader>gt <Action>(GotoTest)
+nmap <leader>gf <Action>(Back)
+nmap <leader>gb <Action>(Forward)
