@@ -1,157 +1,119 @@
 {
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "name": "One Dark italic",
-        "scope": [
-          "comment",
-          "entity.other.attribute-name",
-          "keyword",
-          "markup.underline.link",
-          "storage.modifier",
-          "storage.type",
-          "string.url",
-          "variable.language.super",
-          "variable.language.this"
-        ],
-        "settings": {
-          "fontStyle": "italic"
+    // General
+    "workbench.colorTheme": "Solarized One",
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.guides.indentation": false,
+    "editor.fontSize": 15,
+    "editor.rulers": [80],
+    "editor.lineNumbers": "relative",
+    "editor.codeLens": false,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.showFoldingControls": "never",
+    "vim.useSystemClipboard": true,
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "breadcrumbs.enabled": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    // Terminal
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.fontSize": 14,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.explorerKind": "external",
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono",
+    // NERDTree
+    "nerdtree.hideSidebarWhenOpenFile": false,
+    // Vim
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Switch b/w buffers
+        {
+            "before": ["<Tab>"],
+            "commands": [":bnext"]
+        },
+        {
+            "before": ["<S-Tab>"],
+            "commands": [":bprevious"]
+        },
+        // Splits
+        {
+            "before": ["s", "s"],
+            "commands": ["workbench.action.splitEditorOrthogonal"]
+        },
+        {
+            "before": ["s", "v"],
+            "commands": ["workbench.action.splitEditor"]
+        },
+        // Panes
+        {
+            "before": ["s", "h"],
+            "commands": ["workbench.action.focusLeftGroup"]
+        },
+        {
+            "before": ["s", "j"],
+            "commands": ["workbench.action.focusBelowGroup"]
+        },
+        {
+            "before": ["s", "k"],
+            "commands": ["workbench.action.focusAboveGroup"]
+        },
+        {
+            "before": ["s", "l"],
+            "commands": ["workbench.action.focusRightGroup"]
+        },
+        // Files managament
+        {
+            "before": ["s", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": [";", "r"],
+            "commands": ["workbench.action.findInFiles"]
+        },
+        {
+            "before": ["g", "l"],
+            "commands": ["editor.action.showHover"],
+            "when": "editorTextFocus"
         }
-      },
-      {
-        "name": "One Dark italic reset",
-        "scope": [
-          "keyword.operator",
-          "keyword.other.type",
-          "storage.modifier.import",
-          "storage.modifier.package",
-          "storage.type.built-in",
-          "storage.type.function.arrow",
-          "storage.type.generic",
-          "storage.type.java",
-          "storage.type.primitive"
-        ],
-        "settings": {
-          "fontStyle": ""
+    ],
+    "vim.normalModeKeyBindings": [
+        // Remappings
+    ],
+    "vim.insertModeKeyBindings": [
+        // Remappings
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["g", "c"],
+            "commands": ["editor.action.commentLine", "escape"],
+            "when": "editorTextFocus && !editorReadonly"
         }
-      }
-    ]
-  },
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
-  "[avroavsc]": {
-    "editor.formatOnSave": true
-  },
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true
-  },
-  "[cpp]": {
-    "editor.formatOnSave": true
-  },
-  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 80}",
-  "C_Cpp.default.cppStandard": "c++17",
-  "[scala]": {
-    "editor.defaultFormatter": "scalameta.metals",
-    "editor.formatOnSave": true
-  },
-  "[javascript]": {
-    "editor.formatOnSave": true
-  },
-  "black-formatter.args": ["--line-length", "80"],
-  "vim.hlsearch": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    // Switch b/w buffers
-    {
-      "before": ["<Tab>"],
-      "commands": [":bnext"]
+    ],
+    "vim.handleKeys": {
+        "<C-t>": false
     },
-    {
-      "before": ["<S-Tab>"],
-      "commands": [":bprevious"]
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
     },
-    // Splits
-    {
-      "before": ["s", "s"],
-      "commands": ["workbench.action.splitEditorOrthogonal"]
+    // Code
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff"
     },
-    {
-      "before": ["s", "v"],
-      "commands": ["workbench.action.splitEditor"]
-    },
-    // Panes
-    {
-      "before": ["s", "h"],
-      "commands": ["workbench.action.focusLeftGroup"]
-    },
-    {
-      "before": ["s", "j"],
-      "commands": ["workbench.action.focusBelowGroup"]
-    },
-    {
-      "before": ["s", "k"],
-      "commands": ["workbench.action.focusAboveGroup"]
-    },
-    {
-      "before": ["s", "l"],
-      "commands": ["workbench.action.focusRightGroup"]
-    },
-    // Files managament
-    {
-      "before": ["s", "f"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      "before": [";", "r"],
-      "commands": ["workbench.action.findInFiles"]
-    },
-    {
-      "before": ["g", "l"],
-      "commands": ["editor.action.showHover"],
-      "when": "editorTextFocus"
-    }
-  ],
-  "vim.normalModeKeyBindings": [
-    // Remappings
-  ],
-  "vim.insertModeKeyBindings": [
-    // Remappings
-  ],
-  "vim.visualModeKeyBindings": [
-    {
-      "before": ["g", "c"],
-      "commands": ["editor.action.commentLine", "escape"],
-      "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-      "before": ["o", "i"],
-      "commands": ["editor.action.organizeImports", "escape"],
-      "when": "editorTextFocus && !editorReadonly"
-    }
-  ],
-  "vim.handleKeys": {
-    "<C-t>": false
-  },
-  "files.watcherExclude": {
-    "**/.bloop": true,
-    "**/.metals": true,
-    "**/.ammonite": true
-  },
-  "editor.minimap.enabled": false,
-  "editor.scrollbar.vertical": "hidden",
-  "editor.overviewRulerBorder": false,
-  "editor.hideCursorInOverviewRuler": true,
-  "editor.guides.indentation": false,
-  "editor.fontSize": 15,
-  "editor.rulers": [80],
-  "workbench.activityBar.location": "hidden",
-  "editor.lineNumbers": "relative",
-  "vim.useSystemClipboard": true,
-  // Terminal
-  "terminal.integrated.defaultProfile.osx": "fish",
-  "terminal.integrated.fontSize": 14,
-  "terminal.external.osxExec": "iTerm.app",
-  "terminal.explorerKind": "external",
-  "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono",
-  // NERDTree
-  "nerdtree.hideSidebarWhenOpenFile": false
+    "ruff.lineLength": 79
 }
