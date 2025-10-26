@@ -1,6 +1,5 @@
 {
-    // General
-    "workbench.colorTheme": "Solarized One",
+    "workbench.colorTheme": "Atom One Dark",
     "editor.minimap.enabled": false,
     "editor.scrollbar.vertical": "hidden",
     "editor.scrollbar.horizontal": "hidden",
@@ -99,7 +98,8 @@
         }
     ],
     "vim.handleKeys": {
-        "<C-t>": false
+        "<C-t>": false,
+        "<C-n>": false
     },
     "files.watcherExclude": {
         "**/.bloop": true,
