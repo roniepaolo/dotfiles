@@ -31,6 +31,7 @@
     "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono",
     // NERDTree
     "nerdtree.hideSidebarWhenOpenFile": false,
+    "nerdtree.alwaysShowSidebar": false,
     // Vim
     "vim.hlsearch": true,
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -107,6 +108,14 @@
         "**/.ammonite": true
     },
     // Code
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.packageIndexDepths": [
+        {
+            "name": "",
+            "depth": 1,
+            "includeAllSymbols": true
+        }
+    ],
     "[python]": {
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
@@ -115,5 +124,5 @@
         },
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
-    "ruff.lineLength": 79
+    "ruff.lineLength": 79,
 }
