@@ -76,3 +76,19 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 tmux
 ctrl + a + I (this is for installing the plugins)
 ```
+
+### VSCode Extensions
+- Atom One Dark Them by Mahmoud Ali
+- ESLint by Microsoft
+- GitLens - Git supercharged by GitKraken
+- Jupyter
+- Material Icon Them by Philipp Kief
+- NERDTree by Llam4u
+- Prettier - Code Formatter
+- Python by Microsoft
+- Ruff by Astral Software
+- Vim by vscodevim
+- Docker by Microsoft
+- Dev Containers by Microsoft
+- Error Lens by Alexander
+- Auto Close Tag by Jun Han

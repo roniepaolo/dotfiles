@@ -10,7 +10,6 @@
     "editor.rulers": [80],
     "editor.lineNumbers": "relative",
     "editor.codeLens": false,
-    "editor.tabSize": 4,
     "editor.detectIndentation": false,
     "editor.showFoldingControls": "never",
     "vim.useSystemClipboard": true,
@@ -117,7 +116,8 @@
         }
     ],
     "[python]": {
-        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+        // "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
         "source.fixAll": "explicit",
         "source.organizeImports": "explicit"
@@ -125,5 +125,30 @@
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
     "ruff.lineLength": 79,
+    "[javascriptreact]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescriptreact]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    }
 }
 

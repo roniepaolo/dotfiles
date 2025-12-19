@@ -66,5 +66,11 @@
     "key": "ctrl+n",
     "command": "-selectNextSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && vim.mode == 'Insert'"
+  },
+  {
+    "key": "s v",
+    "command": "explorer.openToSide",
+    "when": "filesExplorerFocus && !inputFocus"
   }
 ]
+
